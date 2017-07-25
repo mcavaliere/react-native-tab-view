@@ -116,7 +116,7 @@ export default class TabViewPagerPan<T: Route<*>> extends PureComponent<
 
   componentDidUpdate(prevProps: Props<T>) {
     if (prevProps.navigationState.index !== this.props.navigationState.index) {
-      this._transitionTo(this.props.navigationState.index);
+      setTimeout(this._transitionTo, 0, this.props.navigationState.index);
     }
   }
 
